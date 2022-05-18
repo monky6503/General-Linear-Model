@@ -19,8 +19,9 @@ summary(model)
 
 ![截圖 2022-05-18 14 13 06](https://user-images.githubusercontent.com/97944035/168969962-18ca85ab-802a-492c-83db-8e10189f1358.png)
 
+
+### Use Newton Method
 ```{r cars}
-##Use Newton Method
 x1<-titanic$fare
 y1<-titanic$survival
 n<-length(y1)
@@ -93,8 +94,9 @@ beta_hat
 ## Poission Regression
 ```{r cars}
 crabs<-read.table("~/Desktop/研究所//數理統計/Crabs.txt",header=TRUE)
-
-##Use package
+```
+###  Use package
+```{r cars}
 model2<-glm(Sa~weight+W,data=crabs,family=poisson(link="log"))
 summary(model2)
 ```
@@ -102,8 +104,9 @@ summary(model2)
 ![截圖 2022-05-18 14 20 46](https://user-images.githubusercontent.com/97944035/168970983-73a2a0af-a252-442d-bf17-5f8be511a4af.png)
 
 
+
+### Use Newton Method
 ```{r cars}
-##Use Newton Method
 x1<-crabs$weight
 x2<-crabs$W
 y<-crabs$Sa
