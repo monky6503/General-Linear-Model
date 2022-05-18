@@ -10,8 +10,9 @@ titanic[na.cols.1,5]<-round(mean_fare,0)
 mean_age<-mean(titanic$age,na.rm=T)
 na.cols.2<-is.na(titanic$age)
 titanic[na.cols.2,3]<-round(mean_age,0)
-
-##Use package
+```
+### Use package
+```{r cars}
 model<-glm(survival~fare,data=titanic,family=binomial(link="logit"))
 summary(model)
 ```
