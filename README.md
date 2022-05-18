@@ -1,6 +1,6 @@
 # General-Linear-Model
 
-Logistic Regression simulation
+##Logistic Regression simulation
 
 ```{r cars}
 titanic<-read.csv("~/Desktop/數理統計/titanic.csv",header=T,sep=",")
@@ -87,3 +87,6 @@ beta_hat<-Newton(x1,y1)[1:2]
 beta_hat
 ```
 ![截圖 2022-05-18 14 13 46](https://user-images.githubusercontent.com/97944035/168970026-97ae871d-bc9c-4a30-833d-8459277077d2.png)
+
+
+##Poission Regression
