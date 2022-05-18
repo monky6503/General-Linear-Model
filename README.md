@@ -1,6 +1,8 @@
 # General-Linear-Model
 
+Logistic Regression simulation
 
+```{r cars}
 titanic<-read.csv("~/Desktop/數理統計/titanic.csv",header=T,sep=",")
 mean_fare<-mean(titanic$fare,na.rm=T) ##missing value replace by mean
 na.cols.1<-is.na(titanic$fare)
@@ -80,4 +82,5 @@ Newton<-function(x,y)
 beta_hat<-Newton(x1,y1)[1:2]
 beta_hat
 
+```
 
