@@ -14,7 +14,8 @@ titanic[na.cols.2,3]<-round(mean_age,0)
 ##Use package
 model<-glm(survival~fare,data=titanic,family=binomial(link="logit"))
 summary(model)
-
+```
+```{r cars}
 ##Use Newton Method
 x1<-titanic$fare
 y1<-titanic$survival
