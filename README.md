@@ -16,6 +16,7 @@ model<-glm(survival~fare,data=titanic,family=binomial(link="logit"))
 summary(model)
 ```
 
+![截圖 2022-05-18 14 13 06](https://user-images.githubusercontent.com/97944035/168969962-18ca85ab-802a-492c-83db-8e10189f1358.png)
 
 ```{r cars}
 ##Use Newton Method
