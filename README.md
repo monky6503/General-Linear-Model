@@ -168,3 +168,32 @@ theta_hat<-Newton(x,y)[1:3]
 theta_hat
 ```
 ![截圖 2022-05-18 14 21 07](https://user-images.githubusercontent.com/97944035/168970990-3b516223-f3e5-42bb-83a8-6379516e6081.png)
+
+## Rgression Tree
+```{r cars}
+
+Data<-read.csv("~/Desktop/研究所/數理統計/Titanic_train.csv",header=T)
+mean_age<-mean(Data$Age,na.rm = T)
+na.impute<-is.na(Data$Age)
+Data[na.impute,6]<-round(mean_age,0)
+
+
+library(rpart)
+
+set.seed(22)
+train.index <- sample(x=1:nrow(Data), size=ceiling(nrow(Data) ))
+train <- Data[train.index, ]
+
+cart.model<- rpart(Survived ~ Sex+Pclass+Age,data=train)
+
+library(rpart.plot) 
+
+prp(cart.model,         
+    faclen=0,           
+    fallen.leaves=TRUE, 
+    shadow.col="gray",  
+    # number of correct classifications / number of observations in that node
+    extra=1
+)
+```
+![tree](https://user-images.githubusercontent.com/97944035/168971884-630deeae-82a0-4332-9c3d-6cf084171b7d.png)
